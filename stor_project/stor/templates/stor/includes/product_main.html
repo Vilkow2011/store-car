@@ -1,0 +1,40 @@
+
+<main>
+    {% for products in product_list %}
+    <div class="card-group gap-10">
+        {% for product in products %}
+        <div class="card">
+            <a href="{{ product.get_absolute_url }}">
+                <img src="{{ product.image.url }}"
+                    class="card-img-top" alt="{{ product.title }}">
+            </a>
+
+            <div class="card-body">
+                <h5 class="card-title">{{ product.title }}</h5>
+                <p class="card-text">{{product.info|truncatewords:10 }}</p>
+                <p class="card-text">{{product.price}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</main><main>
+    {% for products in product_list %}
+    <div class="card-group gap-10">
+        {% for product in products %}
+        <div class="card">
+            <a href="{{ product.get_absolute_url }}">
+                <img src="https://i.pinimg.com/originals/d8/2e/44/d82e445b10d4a671360580c70908337e.jpg"
+                    class="card-img-top" alt="miniquadbike">
+            </a>
+
+            <div class="card-body">
+                <h5 class="card-title">{{ product.title }}</h5>
+                <p class="card-text">{{product.info|truncatewords:10 }}</p>
+                <p class="card-text">{{product.price}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</main>

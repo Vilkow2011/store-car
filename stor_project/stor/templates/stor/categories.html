@@ -1,0 +1,14 @@
+{% extends 'stor/index.html' %}
+
+{% block title %}
+    Store/categories
+{% endblock title %}
+
+{% block content %}
+<h1>Categories</h1>
+<ul class="list-group">
+    {% for category in categories %}
+    <li class="list-group-item"><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

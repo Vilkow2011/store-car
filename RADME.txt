@@ -1,0 +1,36 @@
+Создаем виртуальное окружение
+python -m venv venv
+
+Активируем виртуальное окружение
+venv\scripts\activate
+
+Обновляем пакетный менеджер
+python -m pip install --upgrade pip
+
+Устанавливаем фреймворк
+pip install django
+
+Создаем проект
+django-admin startproject stor_project
+
+Переходим в папку stor_project
+cd stor_project
+
+Создаем приложение
+python manage.py startapp stor
+
+Подключаем базу данных
+python manage.py migrate
+
+Запуск сервира
+python manage.py runserver
+
+при изменении структуры базы данных
+python manage.py makemigrations
+python manage.py migrate
+
+регистрируем администратора
+python manage.py createsuperuser
+
+работа с изображениями
+pip install pillow
